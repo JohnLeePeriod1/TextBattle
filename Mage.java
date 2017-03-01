@@ -8,13 +8,15 @@ public class Mage extends Hero{
         if (this.mana < 8)
             System.out.println("Not enough mana!");
         else if (this.mana > 8){
-            int hitDamage = (int) (Math.random() * (maxDamage+1) + minDamage);
+            int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
             enemy.setHealth(enemy.getHealth() - hitDamage);
+            this.mana = this.mana - 8;
             if (enemy.getHealth() <= 0)
                 enemy.setHealth(0);
+            System.out.println(this.name + " has " + this.mana + " mana left.");
             System.out.println(this.name + " attacks the " + enemy.getName() + " doing " + hitDamage + " damage.");
+            System.out.println(enemy.getName() + " has " + enemy.getHealth() + " health left.");
         }
-        System.out.println(enemy.getName() + " has " + enemy.getHealth() + " health left.");
         System.out.println();
     }
     public void useItem(int choice){
@@ -40,7 +42,7 @@ public class Mage extends Hero{
             }
         }
         else
-            System.out.println("Inventory slot nonexistent");
+            System.out.println("Inventory slot nonexistent. Please enter a valid inventory slot.");
         
     }
 }
