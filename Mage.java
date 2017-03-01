@@ -8,7 +8,7 @@ public class Mage extends Hero{
         if (this.mana < 8)
             System.out.println("Not enough mana!");
         else if (this.mana > 8){
-            int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
+            int hitDamage = (int) ((Math.random() * (maxDamage-minDamage+1)) + minDamage);
             enemy.setHealth(enemy.getHealth() - hitDamage);
             this.mana = this.mana - 8;
             if (enemy.getHealth() <= 0)
