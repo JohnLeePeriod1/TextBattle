@@ -13,7 +13,6 @@ public class Battle{
         charName = console.nextLine();
         System.out.print("Choose a class for your character(1 for warrior; 2 for rogue; 3 for mage): ");
         charChoice = console.nextInt(); 
-        System.out.println();
         while (charChoice > 3 || charChoice < 1){
             System.out.println("Please enter a valid int value");
             System.out.print("Choose a class for your character(1 for warrior; 2 for rogue; 3 for mage): ");
@@ -38,16 +37,19 @@ public class Battle{
             String monsterType1 = "mom";
             mal = new Player(monsterType1, 200, 10, 5);
             System.out.println(charName + " has encountered a " + monsterType1);
+            System.out.println();
         }
         else if (monsterType == 2){
             String monsterType2 = "dad";
             mal = new Player(monsterType2, 120, 25, 15);
             System.out.println(charName + " has encountered a " + monsterType2);
+            System.out.println();
         }
         else if (monsterType == 3){
             String monsterType3 = "sisters";
             mal = new Player(monsterType3, 80, 80, 50);
             System.out.println(charName + " has encountered " + monsterType3);
+            System.out.println();
         }
         do {
             if (turnCount % 2 == 0)
@@ -60,7 +62,7 @@ public class Battle{
                 System.out.print("Type an inventory slot number or 0 to attack: ");
                 decision = console.nextInt();
            }
-                
+           System.out.println();
            if (decision == 1){
                 bueno.useItem(1);
                 turnCount++;
