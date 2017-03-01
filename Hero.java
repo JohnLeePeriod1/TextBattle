@@ -22,8 +22,8 @@ public class Hero extends Player{
             }
         }
         else
-            System.out.println("Inventory slot nonexistent");
-            System.out.println();
+            System.out.println("Inventory slot nonexistent. Please enter a valid inventory slot.");
+        System.out.println();
         }    
     public void show_inventory(){
         System.out.println("Your inventory holds: 1. " + inventory[0] + "; 2. " + inventory[1] + "; 3. " + inventory[2] + ";");
