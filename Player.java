@@ -42,7 +42,7 @@ public class Player{
             System.out.println(name + "is dead.");
     }
     public void attack(Player enemy){
-        int hitDamage = (int) (Math.random() * (maxDamage+1) + minDamage);
+        int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
         enemy.setHealth(enemy.getHealth() - hitDamage);
         if (enemy.getHealth() <= 0)
             enemy.setHealth(0);
