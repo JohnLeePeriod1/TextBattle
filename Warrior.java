@@ -5,7 +5,7 @@ public class Warrior extends Hero{
         critChance = 0.5;
     }
     public void attack(Player enemy){
-        int hitDamage = (int) (Math.random() * (maxDamage+1) + minDamage);
+        int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
         if (critChance > Math.random()){
             hitDamage = hitDamage * 2;
             System.out.println(name + " gets a critical hit!");
