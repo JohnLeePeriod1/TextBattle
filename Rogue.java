@@ -5,7 +5,7 @@ public class Rogue extends Hero{
         this.secondAttackChance = 0.3;
     }
     public void attack(Player enemy){
-        int hitDamage = (int) (Math.random() * (maxDamage+1) + minDamage);
+        int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
         enemy.setHealth(enemy.getHealth() - hitDamage);
         if (enemy.getHealth() <= 0)
             enemy.setHealth(0);
@@ -14,7 +14,7 @@ public class Rogue extends Hero{
         if (secondAttackChance > Math.random()){
             System.out.println();
             System.out.println(name + " gets a double attack!");
-            int secondHitDamage = (int) (Math.random() * (maxDamage+1) + minDamage);
+            int secondHitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
             enemy.setHealth(enemy.getHealth() - hitDamage);
             if (enemy.getHealth() <= 0)
                 enemy.setHealth(0);
