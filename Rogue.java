@@ -5,7 +5,7 @@ public class Rogue extends Hero{
         this.secondAttackChance = 0.3;
     }
     public void attack(Player enemy){
-        int hitDamage = (int) ((Math.random() * (maxDamage+1)) + minDamage);
+        int hitDamage = (int) ((Math.random() * (maxDamage-minDamage+1)) + minDamage);
         enemy.setHealth(enemy.getHealth() - hitDamage);
         if (enemy.getHealth() <= 0)
             enemy.setHealth(0);
